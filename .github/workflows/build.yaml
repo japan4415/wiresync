@@ -18,6 +18,10 @@ jobs:
     - uses: actions/checkout@v3
     - name: Install protobuf
       run: sudo apt install protobuf-compiler
+    - name: Install cargo-watch
+      run: cargo install cargo-watch
+    - name: cargo watch
+      run: cargo watch
     - name: Build
       run: cargo build --release --verbose
     - name: Run tests

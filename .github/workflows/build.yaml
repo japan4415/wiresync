@@ -22,6 +22,10 @@ jobs:
     #   run: cargo install cargo-watch
     # - name: cargo sqlx watch
     #   run: cargo sqlx watch
+    - name: Install cargo-sqlx
+      run: cargo install cargo-sqlx
+    - name: cargo sqlx prepare
+      run: cargo sqlx prepare -- --bin sqlx
     - name: Build
       run: cargo build --release --verbose
       env:

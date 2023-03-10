@@ -19,6 +19,6 @@ jobs:
     - name: Install protobuf
       run: sudo apt install protobuf-compiler
     - name: Build
-      run: cargo build --verbose
+      run: cargo build --release --verbose
     - name: Run tests
       run: cargo test --verbose

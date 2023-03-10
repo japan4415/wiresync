@@ -20,8 +20,8 @@ jobs:
       run: sudo apt install protobuf-compiler
     - name: Install cargo-watch
       run: cargo install cargo-watch
-    - name: cargo watch
-      run: cargo watch
+    - name: cargo sqlx watch
+      run: cargo sqlx watch
     - name: Build
       run: cargo build --release --verbose
     - name: Run tests

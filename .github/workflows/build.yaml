@@ -25,7 +25,7 @@ jobs:
     - name: Install sqlx-cli
       run: cargo install sqlx-cli
     - name: cargo sqlx prepare
-      run: cargo sqlx prepare -- --bin sqlx
+      run: cargo sqlx prepare -- --bin wiresync
     - name: Build
       run: cargo build --release --verbose
       env:

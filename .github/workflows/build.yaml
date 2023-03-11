@@ -18,11 +18,17 @@ jobs:
     - uses: actions/checkout@v3
     - name: Install protobuf
       run: sudo apt install protobuf-compiler
-    - name: Install cargo-watch
-      run: cargo install cargo-watch
-    - name: cargo watch
-      run: cargo watch
+    # - name: Install cargo-watch
+    #   run: cargo install cargo-watch
+    # - name: cargo sqlx watch
+    #   run: cargo sqlx watch
+    # - name: Install sqlx-cli
+    #   run: cargo install sqlx-cli
+    # - name: cargo sqlx prepare
+    #   run: cargo sqlx prepare -- --bin wiresync
     - name: Build
       run: cargo build --release --verbose
+      env:
+        SQLX_OFFLINE: true
     - name: Run tests
       run: cargo test --verbose
